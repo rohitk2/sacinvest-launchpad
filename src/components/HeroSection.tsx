@@ -40,7 +40,7 @@ const HeroSection = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg backdrop-blur-sm"
+              className="border-white text-white bg-white/20 hover:bg-white/30 px-8 py-6 text-lg backdrop-blur-sm font-semibold"
             >
               Learn More
             </Button>
