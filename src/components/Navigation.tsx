@@ -1,4 +1,5 @@
 import { Building2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
@@ -10,9 +11,13 @@ const Navigation = () => {
             <span className="text-2xl font-bold text-primary">SacInvest</span>
           </div>
           
-          {/* Empty navigation - will be filled later */}
           <div className="hidden md:flex items-center space-x-8">
-            {/* Navigation links will go here */}
+            <Link to="/" className="text-foreground hover:text-primary transition-colors">
+              Home
+            </Link>
+            <Link to="/agent" className="text-foreground hover:text-primary transition-colors">
+              SacInvest Agent
+            </Link>
           </div>
         </div>
       </div>
