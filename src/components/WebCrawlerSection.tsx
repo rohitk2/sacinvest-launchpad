@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Globe, Youtube, BookOpen, Home } from "lucide-react";
+import { Globe, Youtube, BookOpen, Home, MessageCircle } from "lucide-react";
 import webCrawlerImage from "@/assets/web-crawler.jpg";
 
 const WebCrawlerSection = () => {
@@ -21,6 +21,12 @@ const WebCrawlerSection = () => {
       name: "Zillow",
       description: "Live property data & valuations",
       color: "text-blue-600"
+    },
+    {
+      icon: <MessageCircle className="h-8 w-8" />,
+      name: "Reddit",
+      description: "Community insights & local discussions",
+      color: "text-orange-500"
     }
   ];
 
@@ -51,28 +57,30 @@ const WebCrawlerSection = () => {
             </Card>
           </div>
           
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold text-foreground mb-8">
+          <div>
+            <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">
               Data Sources We Monitor:
             </h3>
             
-            {dataSources.map((source, index) => (
-              <Card key={index} className="p-6 feature-card border border-border/50">
-                <div className="flex items-start space-x-4">
-                  <div className={`p-3 rounded-lg bg-background ${source.color}`}>
-                    {source.icon}
+            <div className="grid grid-cols-2 gap-6">
+              {dataSources.map((source, index) => (
+                <Card key={index} className="p-6 feature-card border border-border/50 hover:shadow-lg transition-all duration-300 group">
+                  <div className="text-center space-y-4">
+                    <div className={`mx-auto w-16 h-16 rounded-full bg-background/80 flex items-center justify-center ${source.color} group-hover:scale-110 transition-transform duration-300`}>
+                      {source.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-foreground mb-2">
+                        {source.name}
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        {source.description}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-foreground mb-2">
-                      {source.name}
-                    </h4>
-                    <p className="text-muted-foreground">
-                      {source.description}
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>
