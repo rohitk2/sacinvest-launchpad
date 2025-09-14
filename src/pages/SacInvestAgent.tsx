@@ -55,9 +55,6 @@ const SacInvestAgent = () => {
             <h1 className="text-4xl font-bold text-foreground mb-4">
               SacInvest AI Agent
             </h1>
-            <p className="text-muted-foreground text-lg">
-              Your intelligent real estate investment assistant
-            </p>
           </div>
 
           <Card className="h-[600px] flex flex-col bg-card/95 backdrop-blur-sm border border-border/50 shadow-xl">
